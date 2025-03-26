@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 #from docutils.nodes import sidebar
 
@@ -8,8 +7,8 @@ st.title("Tech gadget consumption Vs E-waste generation")
 st.subheader("This is a summary breakdown on how tech gadgets have been adopted globally "
           "from the year 2015 upto 2025")
 
-data=pd.read_csv("C:\\Users\\PC\\Desktop\\python\\Tech_Consumption.csv")
-(data.head())
+data=pd.read_csv("C:\\Users\\PC\\Desktop\\myapp\\Tech_Consumption.csv")
+
 
 dff=data.groupby("Year")["E-Waste Generated (Metric Tons)"].sum().reset_index()
 
@@ -30,7 +29,7 @@ with col1:
     plt.ylabel("smartphone sales",color='black')
     plt.grid(linestyle="--",color='g')
     plt.xticks(rotation=45,color='black')
-    plt.show()
+
     st.pyplot(fig)
 st.write("-> from the Bar plot above it ca be concluded that UK has had the highest sales in smartphones followed by brazil"
              "this indicates that The Uk has had the highest smartphone gadget consumption from 2015-2025")
@@ -45,7 +44,6 @@ with col2:
     plt.ylabel("5G penetration", color='black')
     plt.grid(linestyle="--", color='g')
     plt.xticks(rotation=45, color='b')
-    plt.show()
     st.pyplot(fig2)
 
 
@@ -60,7 +58,6 @@ with col3:
     plt.ylabel("E-waste generation", color='black')
     plt.grid(linestyle="--", color='g')
     plt.xticks(rotation=45, color='g')
-    plt.show()
     st.pyplot(fig3)
     st.write("Brazil is taking the lead as the country with the most E-waste generation."
              "his shows that stringent measures need to be taken by the nation to prevent the possible leering"
@@ -76,7 +73,6 @@ with col4:
     plt.title("change in E-waste generation over years")
     sns.lineplot(data=dff, x='Year', y='E-Waste Generated (Metric Tons)', label='E-waste-trend', color='g')
 
-    plt.show()
     st.pyplot(fig4)
     st.write("The line plot  above shows the amount of E-waste generated with respect to years from 2015-2025")
 

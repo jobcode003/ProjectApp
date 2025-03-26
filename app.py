@@ -7,8 +7,9 @@ st.title("Tech gadget consumption Vs E-waste generation")
 st.subheader("This is a summary breakdown on how tech gadgets have been adopted globally "
           "from the year 2015 upto 2025")
 
-data=pd.read_csv("C:\\Users\\PC\\Desktop\\myapp\\Tech_Consumption.csv")
 
+uploaded_file=st.file_uploader("upload a file",type='csv')
+data=pd.read_csv(uploaded_file)
 
 dff=data.groupby("Year")["E-Waste Generated (Metric Tons)"].sum().reset_index()
 

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<title>sign in</title>
+<head>
+    <style>
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+
+
+        }
+        body{
+            background-image: url("bck.jpg");
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        label{
+            font-size: 28px;
+            color: black;
+
+        }
+        .input1{
+            width: 400px;
+            height: 17px;
+            border: none;
+            padding: 10px;
+            border-radius: 30px;
+        }
+        .inpu{
+            width: 300px;
+            margin: 15px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 25px;
+            background-color:orange;
+            text-decoration: none;
+            color: black;
+            font-size: 28px;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: cadetblue;
+            padding: 50px;
+
+
+        }
+        p{
+            font-size: 25px;
+            text-decoration: underline;
+        }
+        .inp{
+            width: 300px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 25px;
+            background-color: black;;
+            text-decoration: none;
+            color: orange;
+            font-size: 28px;
+        }
+        input{
+            font-size: 25px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div>
+    <form method="post" action="db.php">
+
+        <label for="email">email</label><br>
+        <input type="email" name="email" id="email" class="input1"><br>
+        <label for="password">password</label><br>
+        <input type="password" id="password" name="password" class="input1">
+
+        <input type="submit" class="inpu">
+        <a href="#">forgot password?</a>
+        <p>new here?</p>
+        <a href="signup.html" class="inp">Sign up</a>
+
+    </form>
+</div>
+
+
+
+</body>
+</html>

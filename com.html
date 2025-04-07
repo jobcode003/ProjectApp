@@ -5,27 +5,23 @@
     <link rel="stylesheet" href="comm.css">
 </head>
 <body>
-<div class="heading">
-    <h1>Shopping Yangu</h1>
-    <nav class="nav">
-        <ul class="nav_list">
-            <li>Home</li>
-            <li>payment</li>
-            <li>Affiliate</li>
-        </ul>
-    </nav>
-</div>
 
-<div id="products" class="product-list"></div>
+    <!--this is the heading-->
+    <h1>Your number 1 online store</h1>
 
-<div class="cart_section">
-    <h2>Shopping Cart</h2>
-    <div id="cart"></div>
-    <p>Total: <span id="total">0.00</span></p>
-    <button onclick="checkout()">Checkout</button>
-</div>
+    <!--this is an empty div element that will be a container for the products data this will be
+    updated automatically using javascript's fetch api-->
+    <div id="products" class="product-list"></div>
 
+    <!--this is the cart section -->
+    <div class="cart_section"><!--div container for the items in the cart-->
+        <h2>Shopping Cart</h2><!--heading-->
+        <div id="cart"></div><!--div container for the cart items-->
+        <p>Total: <span id="total">0.00</span></p><!--this is where the total of the value of items is displayed-->
+        <button onclick="checkout()">Checkout</button><!--this is a checkout button-->
+    </div>
 
+<!--this links html file with the javascript file -->
 <script src="comm.js"></script>
 </body>
 </html>
